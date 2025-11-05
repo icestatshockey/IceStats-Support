@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceStats Support Site</title>
+    <style>
+    body {font-family: Arial, sans-serif;line-height:1.6;margin:0;padding:0;background:#f4f4f4;color:#333;}
+    header {background:#007bff;color:white;padding:20px;text-align:center;}
+    nav {background:#333;padding:10px;text-align:center;}
+    nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:20px;max-width:1200px;margin:0 auto;background:white;border-radius:8px;
+             box-shadow:0 2px 10px rgba(0,0,0,.1);margin-bottom:20px;}
+    h1,h2,h3 {color:#007bff;}
+    ul {list-style:disc;padding-left:20px;}
+    footer {background:#333;color:white;text-align:center;padding:10px;position:fixed;width:100%;bottom:0;}
+
+    /* ---- HERO IMAGE ---- */
+    .header-hero {
+        display:block;
+        margin:0 auto 15px;
+        width:320px;
+        height:auto;
+        max-width:100%;
+        border-radius:8px;
+        box-shadow:0 4px 12px rgba(0,0,0,.2);
+        object-fit: contain;
+    }
+    header h1, header p {text-align:center;}
+
+    @media (max-width:768px){
+        nav a{display:block;margin:10px 0;}
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="images/icestats-hero.jpg" class="header-hero" alt="IceStats Hockey Player">
+    <h1>IceStats Support Site</h1>
+    <p>Your go-to resource for help with the IceStats iOS app – the ultimate hockey stats tracker.</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#guide">User Guide</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to IceStats</h2>
+    <p>IceStats is an iOS application designed for hockey enthusiasts, players, and coaches to track and manage player and team statistics. Built with CoreData for seamless data storage, it supports tracking skater stats (goals, assists, hits, etc.), goalie stats (saves, GAA, etc.), and team entries.</p>
+    <p>Whether you're managing a single player's performance or entering stats for an entire team, IceStats provides intuitive summaries, editing capabilities, and more.</p>
+    <p><strong>App Version:</strong> Based on code from September 2025 (e.g., v1.0).</p>
+    <p><a href="https://apps.apple.com/app/icestats" target="_blank" style="color: #007bff;">Download from App Store</a> (Replace with actual link if available).</p>
+</section>
+
+<section id="features">
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>Player Management:</strong> Add, edit, or delete players with details like name, jersey number, position (e.g., Forward, Defense, Goalie), team, and season.</li>
+        <li><strong>Skater Stats Tracking:</strong> Enter game-by-game stats including GP (Games Played), G (Goals), A (Assists), PTS (Points), +/-, Hits, Blocks, PIM (Penalty Minutes), PPG (Power Play Goals), SHG (Short-Handed Goals), OTG (Overtime Goals), Shots, Shooting %, Faceoffs Won/Lost/%, and GWG (Game-Winning Goals).</li>
+        <li><strong>Goalie Stats Tracking:</strong> Specialized stats for goalies like GS (Games Started), W (Wins), L (Losses), T (Ties), OT (Overtime Losses), SA (Shots Against), GA (Goals Against), GAA (Goals Against Average), SV (Saves), SV% (Save Percentage), SO (Shutouts), TOI (Time on Ice), and GL (Goals).</li>
+        <li><strong>Team Stats Entry:</strong> Batch enter stats for entire teams, separating skaters and goalies.</li>
+        <li><strong>Summary Views:</strong> View detailed summaries with sortable columns, horizontal scrolling for extensive stats, and totals calculations. Supports highlighting sorted columns and swipe-to-delete/edit.</li>
+        <li><strong>Data Persistence:</strong> Uses CoreData for local storage, ensuring your stats are saved securely on-device.</li>
+        <li><strong>Accessibility:</strong> Built with accessibility in mind, including VoiceOver support for labels and announcements.</li>
+        <li><strong>Calculations:</strong> Automatic computations for points, shooting %, faceoff %, GAA, SV%, etc.</li>
+    </ul>
+</section>
+
+<section id="guide">
+    <h2>User Guide</h2>
+    <h3>Getting Started</h3>
+    <p>1. Launch the app and tap "Get Started" to add players.</p>
+    <p>2. Enter player details: Name, Team, Position, Jersey Number, Season.</p>
+    <p>3. Save and repeat for your roster.</p>
+
+    <h3>Entering Player Stats</h3>
+    <p>For Skaters:</p>
+    <ul>
+        <li>Navigate to Player Stats Entry.</li>
+        <li>Fill in date, opponent, outcome, and stats fields.</li>
+        <li>Fields like PTS, Shooting %, and Faceoff % are auto-calculated.</li>
+        <li>Save to add to CoreData.</li>
+    </ul>
+    <p>For Goalies:</p>
+    <ul>
+        <li>Use the Goalie Stats Entry view.</li>
+        <li>Enter similar fields, with auto-calcs for GAA, SV, SV%.</li>
+    </ul>
+
+    <h3>Viewing Summaries</h3>
+    <p>1. Select a player from the list.</p>
+    <p>2. View game-by-game stats in a table with horizontal scrolling.</p>
+    <p>3. Tap headers to sort (ascending/descending).</p>
+    <p>4. Swipe left on rows to edit or delete entries.</p>
+    <p>Totals row at the bottom aggregates all stats.</p>
+
+    <h3>Team Stats Entry</h3>
+    <p>1. Select a team.</p>
+    <p>2. Enter shared details (date, opponent).</p>
+    <p>3. Input stats for each skater and goalie in the team.</p>
+    <p>4. Save to update all players' CoreData records.</p>
+
+    <h3>Editing & Deleting</h3>
+    <p>In summaries, swipe for options. Edits use similar forms with pre-filled data.</p>
+    <p>Deletions are confirmed via alerts.</p>
+
+    <h3>Tips</h3>
+    <ul>
+        <li>Positions like "G" auto-route to goalie views.</li>
+        <li>Handle rotations with landscape mode for better visibility.</li>
+        <li>No internet required – all data is local.</li>
+    </ul>
+</section>
+
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <h3>Q: How do I backup my data?</h3>
+    <p>A: IceStats uses CoreData, which is stored in your iOS device's app container. Use iCloud Backup or export via Files app if needed.</p>
+
+    <h3>Q: Why are some fields read-only?</h3>
+    <p>A: Calculated fields like PTS, GAA, etc., are auto-updated based on inputs to prevent errors.</p>
+
+    <h3>Q: Can I track multiple seasons?</h3>
+    <p>A: Yes, assign seasons to players and filter/view accordingly.</p>
+
+    <h3>Q: What if I enter invalid data?</h3>
+    <p>A: The app validates inputs and shows alerts for errors.</p>
+
+    <h3>Q: Is there support for teams with multiple goalies?</h3>
+    <p>A: Yes, enter stats separately; summaries handle per-player views.</p>
+
+    <h3>Q: App crashes or data loss?</h3>
+    <p>A: Ensure iOS is up-to-date. Contact support with details (device model, iOS version, steps to reproduce, the more details the better).</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Support</h2>
+    <p>If you need help, have feedback, or found a bug, reach out!</p>
+    <p>Email: icestatshockey@gmail.com (Replace with actual email)</p>
+    <p>Developer: Jacob Garcia</p>
+</section>
+
+<footer>
+    &copy; 2025 IceStats. All rights reserved.
+</footer>
+
+<script>
+    // Smooth scrolling for nav links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
