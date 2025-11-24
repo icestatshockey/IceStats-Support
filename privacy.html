@@ -16,16 +16,33 @@
         ul {list-style:disc;padding-left:20px;}
         footer {background:#333;color:white;text-align:center;padding:10px;position:fixed;width:100%;bottom:0;}
 
-        .header-hero {
-            display:block;
-            margin:0 auto 15px;
-            max-width:100%;
-            height:auto;
-            width:320px;
-            border-radius:8px;
-            box-shadow:0 4px 12px rgba(0,0,0,.2);
-        }
-        header h1, header p {text-align:center;}
+        /* ---- HERO IMAGE ---- */
+    .header-hero {
+        display:block;
+        margin:0 auto 15px;
+        max-width:100%;
+        height:auto;
+        width:920px;               
+        border-radius:8px;
+        box-shadow:0 4px 12px rgba(0,0,0,.2);
+    }
+    header h1, header p {text-align:center;}
+
+    @media (max-width:768px){
+        nav a{display:block;margin:10px 0;}
+    }
+
+     /* ---- QR IMAGE ---- */
+    .qr {
+        display:block;
+        margin:0 auto 15px;
+        max-width:100%;
+        height:auto;
+        width:120px;               
+        border-radius:8px;
+        box-shadow:0 4px 12px rgba(0,0,0,.2);
+    }
+
 
         .policy p, .policy li {margin-bottom:0.8rem;}
         .policy h3 {margin-top:1.5rem;}
@@ -38,7 +55,8 @@
 <body>
 
 <header>
-    <img src="icestats-hero.jpg" class="header-hero" alt="IceStats Hockey Player">
+    <img src="icestats-hero.png" class="header-hero" alt="IceStats Hockey Player">
+    <img src="qr.png" class="qr">
     <h1>IceStats Privacy Policy</h1>
     <p>Effective Date: November 5, 2025</p>
 </header>
